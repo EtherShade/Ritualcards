@@ -4,6 +4,9 @@
 
   "block.ritualcards.silver_block": "Block of Silver",
   "block.ritualcards.raw_silver_block": "Block of Raw Silver",
+  "block.ritualcards.silver_ore": "Silver Ore",
+  "block.ritualcards.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.ritualcards.end_silver_ore": "End Stone Silver Ore",
 
   "creativetab.ritualcards_resources_tab": "Ritualcards Resources"
 }
