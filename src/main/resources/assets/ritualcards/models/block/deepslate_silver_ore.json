@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures":{
-    "all": "ritualcards:block/deepslate_silver_ore"
-  }
-}

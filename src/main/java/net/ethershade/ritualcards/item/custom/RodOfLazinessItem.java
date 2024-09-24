@@ -1,5 +1,6 @@
 package net.ethershade.ritualcards.item.custom;
 
+import net.ethershade.ritualcards.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.Tags;
 
 public class RodOfLazinessItem extends Item {
     public RodOfLazinessItem(Properties pProperties) {
@@ -50,6 +52,6 @@ public class RodOfLazinessItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(Blocks.IRON_ORE);
+        return state.is(ModTags.Blocks.SILVER_FAST_BLOCKS);
     }
 }
