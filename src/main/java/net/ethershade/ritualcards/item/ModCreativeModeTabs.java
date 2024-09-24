@@ -22,6 +22,7 @@ public static final RegistryObject<CreativeModeTab> RITUALCARDS_RESOURCES_TAB = 
                     pOutput.accept(ModItems.RAW_SILVER.get());
 
                     pOutput.accept(ModBlocks.SILVER_BLOCK.get());
+                    pOutput.accept(ModBlocks.RAW_SILVER_BLOCK.get());
                 })
                 .build());
 
