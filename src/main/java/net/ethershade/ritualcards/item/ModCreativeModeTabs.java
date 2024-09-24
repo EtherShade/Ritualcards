@@ -36,7 +36,15 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.ritualcards_equipment_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ROD_OF_LAZINESS.get());
+                        pOutput.accept(ModItems.SILVER_BERRY.get());
+                    })
+                    .build());
 
+    public static final RegistryObject<CreativeModeTab> RITUALCARDS_CARDS_TAB = CREATIVE_MODE_TABS.register("ritualcards_cards_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLANK_CARD.get()))
+                    .title(Component.translatable("creativetab.ritualcards_cards_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.BLANK_CARD.get());
                     })
                     .build());
 
