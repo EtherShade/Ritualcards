@@ -1,6 +1,7 @@
 package net.ethershade.ritualcards.item;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,8 @@ public static final RegistryObject<CreativeModeTab> RITUALCARDS_RESOURCES_TAB = 
                 .displayItems((pParameters, pOutput) -> {
                     pOutput.accept(ModItems.SILVER_INGOT.get());
                     pOutput.accept(ModItems.RAW_SILVER.get());
+
+                    pOutput.accept(ModBlocks.SILVER_BLOCK.get());
                 })
                 .build());
 

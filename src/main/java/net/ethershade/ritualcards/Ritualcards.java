@@ -1,6 +1,7 @@
 package net.ethershade.ritualcards;
 
 import com.mojang.logging.LogUtils;
+import net.ethershade.ritualcards.block.ModBlocks;
 import net.ethershade.ritualcards.item.ModCreativeModeTabs;
 import net.ethershade.ritualcards.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class Ritualcards {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
