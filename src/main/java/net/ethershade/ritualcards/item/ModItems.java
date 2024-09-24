@@ -1,6 +1,7 @@
 package net.ethershade.ritualcards.item;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.item.custom.RodOfLazinessItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +17,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ROD_OF_LAZINESS = ITEMS.register("rod_of_laziness",
+            () -> new RodOfLazinessItem(new Item.Properties().durability(100)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

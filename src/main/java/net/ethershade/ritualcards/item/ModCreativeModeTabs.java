@@ -14,7 +14,7 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Ritualcards.MOD_ID);
 
-public static final RegistryObject<CreativeModeTab> RITUALCARDS_RESOURCES_TAB = CREATIVE_MODE_TABS.register("ritualcards_resources_tab",
+    public static final RegistryObject<CreativeModeTab> RITUALCARDS_RESOURCES_TAB = CREATIVE_MODE_TABS.register("ritualcards_resources_tab",
         () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SILVER_INGOT.get()))
                 .title(Component.translatable("creativetab.ritualcards_resources_tab"))
                 .displayItems((pParameters, pOutput) -> {
@@ -27,8 +27,18 @@ public static final RegistryObject<CreativeModeTab> RITUALCARDS_RESOURCES_TAB = 
                     pOutput.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());
                     pOutput.accept(ModBlocks.END_SILVER_ORE.get());
 
+                    pOutput.accept(ModBlocks.SILVER_BELL.get());
                 })
                 .build());
+
+    public static final RegistryObject<CreativeModeTab> RITUALCARDS_EQUIPMENT_TAB = CREATIVE_MODE_TABS.register("ritualcards_equipment_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ROD_OF_LAZINESS.get()))
+                    .title(Component.translatable("creativetab.ritualcards_equipment_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.ROD_OF_LAZINESS.get());
+
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

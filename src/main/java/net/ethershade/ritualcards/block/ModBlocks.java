@@ -1,6 +1,7 @@
 package net.ethershade.ritualcards.block;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.block.custom.SilverBellBlock;
 import net.ethershade.ritualcards.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +35,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_SILVER_ORE = registerBlock("end_silver_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
                     .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(5, 6)));
+
+    public static final RegistryObject<Block> SILVER_BELL = registerBlock("silver_bell",
+            () -> new SilverBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

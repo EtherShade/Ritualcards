@@ -2,11 +2,16 @@
   "item.ritualcards.silver_ingot": "Silver Ingot",
   "item.ritualcards.raw_silver": "Raw Silver",
 
+  "item.ritualcards.rod_of_laziness": "Rod of Laziness",
+
   "block.ritualcards.silver_block": "Block of Silver",
   "block.ritualcards.raw_silver_block": "Block of Raw Silver",
   "block.ritualcards.silver_ore": "Silver Ore",
   "block.ritualcards.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.ritualcards.end_silver_ore": "End Stone Silver Ore",
 
-  "creativetab.ritualcards_resources_tab": "Ritualcards Resources"
+  "block.ritualcards.silver_bell": "Silver Bell",
+
+  "creativetab.ritualcards_resources_tab": "Ritualcards Resources",
+  "creativetab.ritualcards_equipment_tab": "Ritualcards Equipment"
 }
