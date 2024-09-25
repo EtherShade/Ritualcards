@@ -30,8 +30,9 @@ import org.jetbrains.annotations.Nullable;
 public class InscribingTableBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
-    private static final int INPUT_SLOT = 0;
-    private static final int OUTPUT_SLOT = 1;
+    private static final int INPUT_SLOT_1 = 0;
+    private static final int INPUT_SLOT_2 = 1;
+    private static final int OUTPUT_SLOT = 2;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -141,14 +142,15 @@ public class InscribingTableBlockEntity extends BlockEntity implements MenuProvi
 
     private void craftItem() {
         ItemStack result = new ItemStack(ModItems.BLANK_CARD.get(), 1);
-        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemHandler.extractItem(INPUT_SLOT_1, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == Items.PAPER;
+        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT_1).getItem() == Items.PAPER
+                && this.itemHandler.getStackInSlot(INPUT_SLOT_2).getItem() == Items.INK_SAC;
         ItemStack result = new ItemStack(ModItems.BLANK_CARD.get());
 
         return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());

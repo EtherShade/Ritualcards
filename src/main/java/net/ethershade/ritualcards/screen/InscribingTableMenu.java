@@ -18,12 +18,12 @@ public class InscribingTableMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public InscribingTableMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
     }
 
     public InscribingTableMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.INSCRIBING_MENU.get(), pContainerId);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, 3);
         blockEntity = ((InscribingTableBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -32,8 +32,9 @@ public class InscribingTableMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 11));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 80, 59));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 70, 11));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 90, 11));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 80, 59));
         });
 
         addDataSlots(data);
@@ -67,7 +68,7 @@ public class InscribingTableMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
