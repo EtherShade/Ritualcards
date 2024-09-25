@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -50,6 +51,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BELL);
 
         makePomegranateCrop(((CropBlock) ModBlocks.POMEGRANATE_CROP.get()), "pomegranate_crop", "pomegranate_stage");
+
+        simpleBlockWithItem(ModBlocks.INSCRIBING_TABLE.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/inscribing_table")));
     }
 
     public void makePomegranateCrop(CropBlock block, String modelName, String textureName) {

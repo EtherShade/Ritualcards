@@ -48,6 +48,8 @@ public class ModCreativeModeTabs {
                     pOutput.accept(ModBlocks.END_SILVER_ORE.get());
 
                     pOutput.accept(ModBlocks.SILVER_BELL.get());
+
+                    pOutput.accept(ModBlocks.INSCRIBING_TABLE.get());
                 })
                 .build());
 

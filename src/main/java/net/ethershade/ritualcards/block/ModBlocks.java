@@ -1,6 +1,7 @@
 package net.ethershade.ritualcards.block;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.block.custom.InscribingTableBlock;
 import net.ethershade.ritualcards.block.custom.PomegranateCropBlock;
 import net.ethershade.ritualcards.block.custom.SilverBellBlock;
 import net.ethershade.ritualcards.item.ModItems;
@@ -74,6 +75,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILVER_BELL = registerBlock("silver_bell",
             () -> new SilverBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL).sound(ModSounds.SILVER_BELL_SOUNDS)));
+
+    public static final RegistryObject<Block> INSCRIBING_TABLE = registerBlock("inscribing_table",
+            () -> new InscribingTableBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
