@@ -21,6 +21,21 @@ public class ModCreativeModeTabs {
                     pOutput.accept(ModItems.SILVER_INGOT.get());
                     pOutput.accept(ModItems.RAW_SILVER.get());
 
+                    pOutput.accept(ModBlocks.STYGIAN_ROCK.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK.get());
+
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_STAIRS.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_SLAB.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_BUTTON.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_PRESSURE_PLATE.get());
+
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE_GATE.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_WALL.get());
+
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_DOOR.get());
+                    pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK_TRAPDOOR.get());
+
                     pOutput.accept(ModBlocks.SILVER_BLOCK.get());
                     pOutput.accept(ModBlocks.RAW_SILVER_BLOCK.get());
                     pOutput.accept(ModBlocks.SILVER_ORE.get());
@@ -37,6 +52,11 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ROD_OF_LAZINESS.get());
                         pOutput.accept(ModItems.SILVER_BERRY.get());
+                        pOutput.accept(ModItems.SILVER_SWORD.get());
+                        pOutput.accept(ModItems.SILVER_PICKAXE.get());
+                        pOutput.accept(ModItems.SILVER_AXE.get());
+                        pOutput.accept(ModItems.SILVER_SHOVEL.get());
+                        pOutput.accept(ModItems.SILVER_HOE.get());
                     })
                     .build());
 

@@ -8,6 +8,26 @@
 
   "item.ritualcards.blank_card": "Blank Card",
 
+  "item.ritualcards.silver_sword": "Silver Sword",
+  "item.ritualcards.silver_pickaxe": "Silver Pickaxe",
+  "item.ritualcards.silver_axe": "Silver Axe",
+  "item.ritualcards.silver_shovel": "Silver Shovel",
+  "item.ritualcards.silver_hoe": "Silver Hoe",
+
+  "block.ritualcards.stygian_rock": "Stygian Rock",
+
+  "block.ritualcards.cobbled_stygian_rock": "Cobbled Stygian Rock",
+
+  "block.ritualcards.cobbled_stygian_rock_stairs": "Cobbled Stygian Rock Stairs",
+  "block.ritualcards.cobbled_stygian_rock_slab": "Cobbled Stygian Rock Slab",
+  "block.ritualcards.cobbled_stygian_rock_button": "Cobbled Stygian Rock Button",
+  "block.ritualcards.cobbled_stygian_rock_pressure_plate": "Cobbled Stygian Rock Pressure Plate",
+  "block.ritualcards.cobbled_stygian_rock_fence": "Cobbled Stygian Rock Fence",
+  "block.ritualcards.cobbled_stygian_rock_fence_gate": "Cobbled Stygian Rock Fence Gate",
+  "block.ritualcards.cobbled_stygian_rock_wall": "Cobbled Stygian Rock Wall",
+  "block.ritualcards.cobbled_stygian_rock_door": "Cobbled Stygian Rock Door",
+  "block.ritualcards.cobbled_stygian_rock_trapdoor": "Cobbled Stygian Rock Trapdoor",
+
   "block.ritualcards.silver_block": "Block of Silver",
   "block.ritualcards.raw_silver_block": "Block of Raw Silver",
   "block.ritualcards.silver_ore": "Silver Ore",

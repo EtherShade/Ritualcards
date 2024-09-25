@@ -3,13 +3,13 @@ package net.ethershade.ritualcards.block;
 import net.ethershade.ritualcards.Ritualcards;
 import net.ethershade.ritualcards.block.custom.SilverBellBlock;
 import net.ethershade.ritualcards.item.ModItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,6 +20,37 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Ritualcards.MOD_ID);
+
+    public static final RegistryObject<Block> STYGIAN_ROCK = registerBlock("stygian_rock",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK = registerBlock("cobbled_stygian_rock",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_STAIRS = registerBlock("cobbled_stygian_rock_stairs",
+            () -> new StairBlock(() -> ModBlocks.COBBLED_STYGIAN_ROCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_SLAB = registerBlock("cobbled_stygian_rock_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_BUTTON = registerBlock("cobbled_stygian_rock_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
+                    BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_PRESSURE_PLATE = registerBlock("cobbled_stygian_rock_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE),
+                    BlockSetType.STONE));
+
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_FENCE = registerBlock("cobbled_stygian_rock_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_FENCE_GATE = registerBlock("cobbled_stygian_rock_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE), SoundEvents.DEEPSLATE_PLACE, SoundEvents.DEEPSLATE_PLACE));
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_WALL = registerBlock("cobbled_stygian_rock_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_DOOR = registerBlock("cobbled_stygian_rock_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion(), BlockSetType.IRON));
+    public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_TRAPDOOR = registerBlock("cobbled_stygian_rock_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion(), BlockSetType.IRON));
 
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

@@ -1,13 +1,16 @@
 package net.ethershade.ritualcards.datagen;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.block.ModBlocks;
 import net.ethershade.ritualcards.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -24,11 +27,68 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SILVER_BERRY);
 
         simpleItem(ModItems.BLANK_CARD);
+
+
+        simpleBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_DOOR);
+
+        fenceItem(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE, ModBlocks.COBBLED_STYGIAN_ROCK);
+        buttonItem(ModBlocks.COBBLED_STYGIAN_ROCK_BUTTON, ModBlocks.COBBLED_STYGIAN_ROCK);
+        wallItem(ModBlocks.COBBLED_STYGIAN_ROCK_WALL, ModBlocks.COBBLED_STYGIAN_ROCK);
+
+        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_SLAB);
+        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE_GATE);
+
+        trapdoorItem(ModBlocks.COBBLED_STYGIAN_ROCK_TRAPDOOR);
+
+        handheldItem(ModItems.SILVER_SWORD);
+        handheldItem(ModItems.SILVER_PICKAXE);
+        handheldItem(ModItems.SILVER_AXE);
+        handheldItem(ModItems.SILVER_SHOVEL);
+        handheldItem(ModItems.SILVER_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Ritualcards.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(Ritualcards.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    public void trapdoorItem(RegistryObject<Block> block) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(Ritualcards.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(Ritualcards.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(Ritualcards.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Ritualcards.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(Ritualcards.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

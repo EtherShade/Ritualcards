@@ -3,7 +3,7 @@ package net.ethershade.ritualcards.item;
 import net.ethershade.ritualcards.Ritualcards;
 import net.ethershade.ritualcards.item.custom.FuelItem;
 import net.ethershade.ritualcards.item.custom.RodOfLazinessItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,6 +27,17 @@ public class ModItems {
 
     public static final RegistryObject<Item> BLANK_CARD = ITEMS.register("blank_card",
             () -> new FuelItem(new Item.Properties(), 800));
+
+    public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register("silver_sword",
+            () -> new SwordItem(ModToolTiers.SILVER, 4, 2, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_PICKAXE = ITEMS.register("silver_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.SILVER, 1, 1, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_AXE = ITEMS.register("silver_axe",
+            () -> new AxeItem(ModToolTiers.SILVER, 7, 1, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_SHOVEL = ITEMS.register("silver_shovel",
+            () -> new ShovelItem(ModToolTiers.SILVER, 0, 0, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_HOE = ITEMS.register("silver_hoe",
+            () -> new HoeItem(ModToolTiers.SILVER, 0, 0, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

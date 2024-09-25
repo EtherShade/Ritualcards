@@ -44,5 +44,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.END_SILVER_ORE.get());
 
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE_GATE.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.COBBLED_STYGIAN_ROCK_WALL.get());
+
     }
 }

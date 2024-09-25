@@ -23,6 +23,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.add(ModBlocks.STYGIAN_ROCK.get(),
+                block -> createOreDrop(ModBlocks.STYGIAN_ROCK.get(), Item.byBlock(ModBlocks.COBBLED_STYGIAN_ROCK.get())));
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK.get());
+
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_STAIRS.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_BUTTON.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.COBBLED_STYGIAN_ROCK_WALL.get());
+
+        this.add(ModBlocks.COBBLED_STYGIAN_ROCK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COBBLED_STYGIAN_ROCK_SLAB.get()));
+        this.add(ModBlocks.COBBLED_STYGIAN_ROCK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.COBBLED_STYGIAN_ROCK_DOOR.get()));
+
         this.dropSelf(ModBlocks.SILVER_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
         this.dropSelf(ModBlocks.SILVER_BELL.get());
