@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.ethershade.ritualcards.block.ModBlocks;
 import net.ethershade.ritualcards.item.ModCreativeModeTabs;
 import net.ethershade.ritualcards.item.ModItems;
+import net.ethershade.ritualcards.sound.ModSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -29,6 +30,9 @@ public class Ritualcards {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

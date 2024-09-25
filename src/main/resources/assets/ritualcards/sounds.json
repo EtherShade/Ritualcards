@@ -1,0 +1,38 @@
+{
+  "rod_of_laziness_teleported": {
+    "subtitle": "sounds.ritualcards.rod_of_laziness_teleported",
+    "sounds": [
+      "ritualcards:rod_of_laziness_teleported"
+    ]
+  },
+  "silver_bell_break": {
+    "subtitle": "sounds.ritualcards.silver_bell_break",
+    "sounds": [
+      "ritualcards:silver_bell_break"
+    ]
+  },
+  "silver_bell_step": {
+    "subtitle": "sounds.ritualcards.silver_bell_step",
+    "sounds": [
+      "ritualcards:silver_bell_step"
+    ]
+  },
+  "silver_bell_place": {
+    "subtitle": "sounds.ritualcards.silver_bell_place",
+    "sounds": [
+      "ritualcards:silver_bell_place"
+    ]
+  },
+  "silver_bell_hit": {
+    "subtitle": "sounds.ritualcards.silver_bell_hit",
+    "sounds": [
+      "ritualcards:silver_bell_hit"
+    ]
+  },
+  "silver_bell_fall": {
+    "subtitle": "sounds.ritualcards.silver_bell_fall",
+    "sounds": [
+      "ritualcards:silver_bell_fall"
+    ]
+  }
+}

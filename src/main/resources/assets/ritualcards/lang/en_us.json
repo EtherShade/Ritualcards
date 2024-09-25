@@ -1,8 +1,12 @@
 {
   "item.ritualcards.silver_ingot": "Silver Ingot",
   "item.ritualcards.raw_silver": "Raw Silver",
+  "item.ritualcards.studded_leather": "Studded Leather",
+  "item.ritualcards.studded_bone": "Studded Bone",
 
   "item.ritualcards.silver_berry": "Silver Berry",
+  "item.ritualcards.pomegranate": "Pomegranate",
+  "item.ritualcards.pomegranate_seeds": "Pomegranate Seeds",
 
   "item.ritualcards.rod_of_laziness": "Rod of Laziness",
 
@@ -13,6 +17,20 @@
   "item.ritualcards.silver_axe": "Silver Axe",
   "item.ritualcards.silver_shovel": "Silver Shovel",
   "item.ritualcards.silver_hoe": "Silver Hoe",
+  "item.ritualcards.silver_helmet": "Silver Helmet",
+  "item.ritualcards.silver_chestplate": "Silver Chestplate",
+  "item.ritualcards.silver_leggings": "Silver Leggings",
+  "item.ritualcards.silver_boots": "Silver Boots",
+
+  "item.ritualcards.copper_sword": "Copper Sword",
+  "item.ritualcards.copper_pickaxe": "Copper Pickaxe",
+  "item.ritualcards.copper_axe": "Copper Axe",
+  "item.ritualcards.copper_shovel": "Copper Shovel",
+  "item.ritualcards.copper_hoe": "Copper Hoe",
+  "item.ritualcards.copper_helmet": "Copper Helmet",
+  "item.ritualcards.copper_chestplate": "Copper Chestplate",
+  "item.ritualcards.copper_leggings": "Copper Leggings",
+  "item.ritualcards.copper_boots": "Copper Boots",
 
   "block.ritualcards.stygian_rock": "Stygian Rock",
 
@@ -35,6 +53,13 @@
   "block.ritualcards.end_silver_ore": "End Stone Silver Ore",
 
   "block.ritualcards.silver_bell": "Silver Bell",
+
+  "sounds.ritualcards.rod_of_laziness_teleported": "Player Teleports",
+  "sounds.ritualcards.silver_bell_break": "Block Breaks",
+  "sounds.ritualcards.silver_bell_step": "Footsteps",
+  "sounds.ritualcards.silver_bell_place": "Block Placed",
+  "sounds.ritualcards.silver_bell_hit": "Block Breaking",
+  "sounds.ritualcards.silver_bell_fall": "Player Falls",
 
   "creativetab.ritualcards_resources_tab": "Ritualcards Resources",
   "creativetab.ritualcards_equipment_tab": "Ritualcards Equipment",

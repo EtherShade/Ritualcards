@@ -1,7 +1,9 @@
 package net.ethershade.ritualcards.datagen.loot;
 
 import net.ethershade.ritualcards.block.ModBlocks;
+import net.ethershade.ritualcards.block.custom.PomegranateCropBlock;
 import net.ethershade.ritualcards.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -11,6 +13,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -50,6 +54,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
         this.add(ModBlocks.END_SILVER_ORE.get(),
                 block -> createTwoOrThreeOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
+
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.POMEGRANATE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PomegranateCropBlock.AGE, 5));
+
+        this.add(ModBlocks.POMEGRANATE_CROP.get(), createCropDrops(ModBlocks.POMEGRANATE_CROP.get(), ModItems.POMEGRANATE.get(),
+                ModItems.POMEGRANATE_SEEDS.get(), lootitemcondition$builder));
     }
 
     protected LootTable.Builder createTwoOrThreeOreDrops(Block pBlock, Item item) {

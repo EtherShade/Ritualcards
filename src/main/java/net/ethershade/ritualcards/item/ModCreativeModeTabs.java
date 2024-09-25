@@ -21,6 +21,11 @@ public class ModCreativeModeTabs {
                     pOutput.accept(ModItems.SILVER_INGOT.get());
                     pOutput.accept(ModItems.RAW_SILVER.get());
 
+                    pOutput.accept(ModItems.STUDDED_LEATHER.get());
+                    pOutput.accept(ModItems.STUDDED_BONE.get());
+
+                    pOutput.accept(ModItems.POMEGRANATE_SEEDS.get());
+
                     pOutput.accept(ModBlocks.STYGIAN_ROCK.get());
                     pOutput.accept(ModBlocks.COBBLED_STYGIAN_ROCK.get());
 
@@ -52,11 +57,34 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ROD_OF_LAZINESS.get());
                         pOutput.accept(ModItems.SILVER_BERRY.get());
+                        pOutput.accept(ModItems.POMEGRANATE.get());
+
+                        pOutput.accept(ModItems.COPPER_SWORD.get());
+                        pOutput.accept(ModItems.COPPER_PICKAXE.get());
+                        pOutput.accept(ModItems.COPPER_AXE.get());
+                        pOutput.accept(ModItems.COPPER_SHOVEL.get());
+                        pOutput.accept(ModItems.COPPER_HOE.get());
+                        pOutput.accept(ModItems.COPPER_HELMET.get());
+                        pOutput.accept(ModItems.COPPER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.COPPER_LEGGINGS.get());
+                        pOutput.accept(ModItems.COPPER_BOOTS.get());
+
                         pOutput.accept(ModItems.SILVER_SWORD.get());
                         pOutput.accept(ModItems.SILVER_PICKAXE.get());
                         pOutput.accept(ModItems.SILVER_AXE.get());
                         pOutput.accept(ModItems.SILVER_SHOVEL.get());
                         pOutput.accept(ModItems.SILVER_HOE.get());
+                        pOutput.accept(ModItems.SILVER_HELMET.get());
+                        pOutput.accept(ModItems.SILVER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.SILVER_LEGGINGS.get());
+                        pOutput.accept(ModItems.SILVER_BOOTS.get());
+
+                        pOutput.accept(ModItems.STUDDED_BONE_DAGGER.get());
+                        pOutput.accept(ModItems.STUDDED_LEATHER_HELMET.get());
+                        pOutput.accept(ModItems.STUDDED_LEATHER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.STUDDED_LEATHER_LEGGINGS.get());
+                        pOutput.accept(ModItems.STUDDED_LEATHER_BOOTS.get());
+
                     })
                     .build());
 

@@ -1,8 +1,10 @@
 package net.ethershade.ritualcards.block;
 
 import net.ethershade.ritualcards.Ritualcards;
+import net.ethershade.ritualcards.block.custom.PomegranateCropBlock;
 import net.ethershade.ritualcards.block.custom.SilverBellBlock;
 import net.ethershade.ritualcards.item.ModItems;
+import net.ethershade.ritualcards.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -52,6 +54,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> COBBLED_STYGIAN_ROCK_TRAPDOOR = registerBlock("cobbled_stygian_rock_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion(), BlockSetType.IRON));
 
+    public static final RegistryObject<Block> POMEGRANATE_CROP = BLOCKS.register("pomegranate_crop",
+            () -> new PomegranateCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
@@ -68,7 +73,7 @@ public class ModBlocks {
                     .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(5, 6)));
 
     public static final RegistryObject<Block> SILVER_BELL = registerBlock("silver_bell",
-            () -> new SilverBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL)));
+            () -> new SilverBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL).sound(ModSounds.SILVER_BELL_SOUNDS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

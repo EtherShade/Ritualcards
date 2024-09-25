@@ -1,9 +1,11 @@
 package net.ethershade.ritualcards.item.custom;
 
+import net.ethershade.ritualcards.sound.ModSounds;
 import net.ethershade.ritualcards.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -31,6 +33,9 @@ public class RodOfLazinessItem extends Item {
                 if(isValuableBlock(state)) {
                     outputvaluablecoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
+
+                    pContext.getLevel().playSeededSound(null, positionClicked.getX(), positionClicked.getY(), positionClicked.getZ(),
+                            ModSounds.ROD_OF_LAZINESS_TELEPORTED.get(), SoundSource.BLOCKS, 1, 1, 0);
 
                     break;
                 }
