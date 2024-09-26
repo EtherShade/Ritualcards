@@ -2,10 +2,8 @@ package net.ethershade.ritualcards;
 
 import com.mojang.logging.LogUtils;
 import net.ethershade.ritualcards.block.ModBlocks;
-import net.ethershade.ritualcards.block.entity.ModBlockEntities;
 import net.ethershade.ritualcards.item.ModCreativeModeTabs;
 import net.ethershade.ritualcards.item.ModItems;
-import net.ethershade.ritualcards.screen.InscribingTableScreen;
 import net.ethershade.ritualcards.screen.ModMenuTypes;
 import net.ethershade.ritualcards.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -38,8 +36,6 @@ public class Ritualcards {
 
         ModSounds.register(modEventBus);
 
-        ModBlockEntities.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -69,7 +65,6 @@ public class Ritualcards {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
 
-            MenuScreens.register(ModMenuTypes.INSCRIBING_MENU.get(), InscribingTableScreen::new);
         }
     }
 }

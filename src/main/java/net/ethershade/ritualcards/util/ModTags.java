@@ -10,7 +10,9 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> SILVER_FAST_BLOCKS = tag("silver_fast_blocks");
+        public static final TagKey<Block> DEALERS_BLOCKS = tag("dealers_blocks");
+        public static final TagKey<Block> GAMBLERS_BLOCKS = tag("gamblers_blocks");
+        public static final TagKey<Block> PLAYERS_BLOCKS = tag("players_blocks");
 
 
 

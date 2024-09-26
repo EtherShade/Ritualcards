@@ -20,17 +20,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.SILVER_HELMET.get())
-                .add(ModItems.SILVER_CHESTPLATE.get())
-                .add(ModItems.SILVER_LEGGINGS.get())
-                .add(ModItems.SILVER_BOOTS.get())
-                .add(ModItems.COPPER_HELMET.get())
-                .add(ModItems.COPPER_CHESTPLATE.get())
-                .add(ModItems.COPPER_LEGGINGS.get())
-                .add(ModItems.COPPER_BOOTS.get())
-                .add(ModItems.STUDDED_LEATHER_HELMET.get())
-                .add(ModItems.STUDDED_LEATHER_CHESTPLATE.get())
-                .add(ModItems.STUDDED_LEATHER_LEGGINGS.get())
-                .add(ModItems.STUDDED_LEATHER_BOOTS.get());
+                .add(ModItems.DEALERS_HELMET.get())
+                .add(ModItems.DEALERS_CHESTPLATE.get())
+                .add(ModItems.DEALERS_LEGGINGS.get())
+                .add(ModItems.DEALERS_BOOTS.get())
+                .add(ModItems.GAMBLERS_HELMET.get())
+                .add(ModItems.GAMBLERS_CHESTPLATE.get())
+                .add(ModItems.GAMBLERS_LEGGINGS.get())
+                .add(ModItems.GAMBLERS_BOOTS.get())
+                .add(ModItems.PLAYERS_HELMET.get())
+                .add(ModItems.PLAYERS_CHESTPLATE.get())
+                .add(ModItems.PLAYERS_LEGGINGS.get())
+                .add(ModItems.PLAYERS_BOOTS.get());
     }
 }

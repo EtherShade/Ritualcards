@@ -1,7 +1,6 @@
 package net.ethershade.ritualcards.datagen;
 
 import net.ethershade.ritualcards.Ritualcards;
-import net.ethershade.ritualcards.block.ModBlocks;
 import net.ethershade.ritualcards.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -42,57 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.SILVER_INGOT);
-        simpleItem(ModItems.RAW_SILVER);
-        simpleItem(ModItems.STUDDED_LEATHER);
-        simpleItem(ModItems.STUDDED_BONE);
-
-        simpleItem(ModItems.ROD_OF_LAZINESS);
-        simpleItem(ModItems.SILVER_BERRY);
-        simpleItem(ModItems.POMEGRANATE);
-        simpleItem(ModItems.POMEGRANATE_SEEDS);
-
         simpleItem(ModItems.BLANK_CARD);
-
-
-        simpleBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_DOOR);
-
-        fenceItem(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE, ModBlocks.COBBLED_STYGIAN_ROCK);
-        buttonItem(ModBlocks.COBBLED_STYGIAN_ROCK_BUTTON, ModBlocks.COBBLED_STYGIAN_ROCK);
-        wallItem(ModBlocks.COBBLED_STYGIAN_ROCK_WALL, ModBlocks.COBBLED_STYGIAN_ROCK);
-
-        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_STAIRS);
-        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_SLAB);
-        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_PRESSURE_PLATE);
-        evenSimplerBlockItem(ModBlocks.COBBLED_STYGIAN_ROCK_FENCE_GATE);
-
-        trapdoorItem(ModBlocks.COBBLED_STYGIAN_ROCK_TRAPDOOR);
-
-        handheldItem(ModItems.COPPER_SWORD);
-        handheldItem(ModItems.COPPER_PICKAXE);
-        handheldItem(ModItems.COPPER_AXE);
-        handheldItem(ModItems.COPPER_SHOVEL);
-        handheldItem(ModItems.COPPER_HOE);
-        trimmedArmorItem(ModItems.COPPER_HELMET);
-        trimmedArmorItem(ModItems.COPPER_CHESTPLATE);
-        trimmedArmorItem(ModItems.COPPER_LEGGINGS);
-        trimmedArmorItem(ModItems.COPPER_BOOTS);
-
-        handheldItem(ModItems.SILVER_SWORD);
-        handheldItem(ModItems.SILVER_PICKAXE);
-        handheldItem(ModItems.SILVER_AXE);
-        handheldItem(ModItems.SILVER_SHOVEL);
-        handheldItem(ModItems.SILVER_HOE);
-        trimmedArmorItem(ModItems.SILVER_HELMET);
-        trimmedArmorItem(ModItems.SILVER_CHESTPLATE);
-        trimmedArmorItem(ModItems.SILVER_LEGGINGS);
-        trimmedArmorItem(ModItems.SILVER_BOOTS);
-
-        handheldItem(ModItems.STUDDED_BONE_DAGGER);
-        trimmedArmorItem(ModItems.STUDDED_LEATHER_HELMET);
-        trimmedArmorItem(ModItems.STUDDED_LEATHER_CHESTPLATE);
-        trimmedArmorItem(ModItems.STUDDED_LEATHER_LEGGINGS);
-        trimmedArmorItem(ModItems.STUDDED_LEATHER_BOOTS);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

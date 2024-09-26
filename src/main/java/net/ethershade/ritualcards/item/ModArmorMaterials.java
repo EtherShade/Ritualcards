@@ -10,12 +10,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 15, new int[]{ 5, 7, 5, 4}, 25,
-            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 4f, () -> Ingredient.of(ModItems.SILVER_INGOT.get())),
-    SILVER("silver", 20, new int[]{ 5, 7, 5, 4}, 25,
-            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(ModItems.SILVER_INGOT.get())),
-    STUDDED_LEATHER("studded_leather", 20, new int[]{ 5, 7, 5, 4}, 25,
-    SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 2f, () -> Ingredient.of(ModItems.STUDDED_LEATHER.get()));
+    DEALER("dealer", 50, new int[]{ 5, 7, 5, 4}, 25,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 10f, 10f, () -> Ingredient.of(ModItems.BLANK_CARD.get())),
+    GAMBLER("gambler", 50, new int[]{ 5, 7, 5, 4}, 25,
+    SoundEvents.ARMOR_EQUIP_NETHERITE, 10f, 10f, () -> Ingredient.of(ModItems.BLANK_CARD.get())),
+    PLAYER("player", 50, new int[]{ 5, 7, 5, 4}, 25,
+    SoundEvents.ARMOR_EQUIP_NETHERITE, 10f, 10f, () -> Ingredient.of(ModItems.BLANK_CARD.get()));
 
     private final String name;
     private final int durabilityMultiplier;
